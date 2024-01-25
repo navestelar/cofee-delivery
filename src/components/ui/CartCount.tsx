@@ -1,9 +1,11 @@
 import { Minus, Plus } from '@phosphor-icons/react'
-import { useState } from 'react'
 
-export default function CartCount() {
-  const [count, setCount] = useState(0)
+interface cartCountProperties {
+  count: number
+  setCount: (value: number) => void
+}
 
+export default function CartCount({ count, setCount }: cartCountProperties) {
   function handleDecrease() {
     count > 0 && setCount(count - 1)
   }
@@ -13,13 +15,13 @@ export default function CartCount() {
   }
 
   function handleValidateInput(value: number) {
-    if (value >= 0 && value < 99) {
+    if (value >= 0 && value < 100) {
       setCount(value)
     }
   }
 
   return (
-    <div className="flex items-center p-2 gap-1 rounded-md bg-gray-300 w-fit">
+    <div className="flex w-fit items-center gap-1 rounded-md bg-gray-300 p-2">
       <Minus
         size={14}
         onClick={handleDecrease}

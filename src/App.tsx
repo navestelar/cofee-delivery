@@ -1,9 +1,10 @@
-import CartCount from './components/ui/CartCount'
+import { BrowserRouter } from 'react-router-dom'
+import { AppRoutes } from './router'
 
 export default function App() {
   return (
-    <div className="m-[20px]">
-      <CartCount />
-    </div>
+    <BrowserRouter>
+      <AppRoutes />
+    </BrowserRouter>
   )
 }
