@@ -9,7 +9,9 @@ export default function Header() {
   return (
     <header className="container flex justify-between py-8">
       <NavLink to="/" title="Home">
-        <img src={Logotipo} alt="Logotivo coffe delivery" />
+        <h1 title="Coffe Delivery">
+          <img src={Logotipo} alt="Logotivo coffe delivery" />
+        </h1>
       </NavLink>
       <div className="flex gap-3">
         <div className="flex gap-1 rounded-md bg-purple-300 p-2">
