@@ -29,7 +29,7 @@ export default function Button({
       onClick={onClick}
     >
       {icon}
-      <span>{label}</span>
+      {label && <span>{label}</span>}
       {cartCount && (
         <span className="absolute right-[-8px] top-[-8px] flex size-5 place-content-center place-items-center rounded-full bg-yellow-700 text-xs font-bold text-white">
           {cartCount}

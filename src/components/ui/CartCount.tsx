@@ -32,7 +32,7 @@ export default function CartCount({ count, setCount }: cartCountProperties) {
         type="text"
         maxLength={3}
         value={count}
-        className="max-w-[20px] bg-gray-300 text-center outline-none h-4"
+        className="h-4 max-w-[20px] bg-gray-300 text-center outline-none"
         onChange={(e) => handleValidateInput(Number(e.target.value))}
       />
       <Plus
