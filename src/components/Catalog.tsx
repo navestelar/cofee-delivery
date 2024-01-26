@@ -1,27 +1,10 @@
-import colors from 'tailwindcss/colors'
-import { ReactNode } from 'react'
-import { Each } from '../utils/Each'
-import CartCount from './ui/CartCount'
-import Button from './ui/Button'
 import { ShoppingCartSimple } from '@phosphor-icons/react'
+import colors from 'tailwindcss/colors'
 
-type tagsOption =
-  | 'tradicional'
-  | 'gelado'
-  | 'com leite'
-  | 'especial'
-  | 'alcoólico'
-
-export interface coffeProperties {
-  title: string
-  subtitle?: string
-  img: ReactNode
-  tags?: tagsOption[]
-  price: string
-  quantity: number
-  setQuantity: (value: number) => void
-  onClick: () => void
-}
+import { coffeProperties } from '../interfaces/coffe-interface'
+import { Each } from '../utils/Each'
+import Button from './ui/Button'
+import CartCount from './ui/CartCount'
 
 export default function Catalog({
   title,
@@ -34,7 +17,7 @@ export default function Catalog({
   setQuantity,
 }: coffeProperties) {
   return (
-    <div className="mt-5 flex w-64 flex-col place-items-center rounded-bl-[2.25rem] rounded-br-md rounded-tl-md rounded-tr-[2.25rem] bg-gray-100 p-5">
+    <div className="flex w-64 flex-col place-items-center rounded-bl-[2.25rem] rounded-br-md rounded-tl-md rounded-tr-[2.25rem] bg-gray-100 p-5">
       <div className="mt-[-40px] size-[7.5rem]">{img}</div>
 
       {tags && (
