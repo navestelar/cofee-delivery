@@ -10,7 +10,7 @@ export default function Main() {
       <div className="absolute max-h-[544px] w-screen">
         <img className="max-h-[544px] w-screen" src={Background} alt="" />
       </div>
-      <div className="container flex h-[34rem] items-center justify-between">
+      <div className="container mb-10 flex h-[46rem] flex-col-reverse items-center justify-between sm:h-[34rem] lg:mb-0 lg:flex-row">
         <div className="max-w-[36.75rem]">
           <div className="mb-[4.125rem] flex flex-col gap-4">
             <span className="font-baloo text-5xl text-gray-900">
@@ -22,7 +22,7 @@ export default function Main() {
             </p>
           </div>
 
-          <div className="flex max-w-[560px] justify-between">
+          <div className="flex max-w-[560px] flex-col justify-between gap-5 sm:flex-row sm:gap-0">
             <div className="flex flex-col gap-5">
               <div className="flex items-center gap-3">
                 <span className="rounded-full bg-yellow-700 p-2">
@@ -63,7 +63,7 @@ export default function Main() {
           </div>
         </div>
 
-        <div>
+        <div className="max-w-[320px] lg:max-w-[476px]">
           <img src={CoffeImage} alt="Coffe" />
         </div>
       </div>

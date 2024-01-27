@@ -4,9 +4,11 @@ import { Each } from '../../utils/Each'
 
 export default function CoffesSection() {
   return (
-    <section className="container">
-      <p>Nossos cafés</p>
-      <article className="flex flex-wrap gap-4">
+    <section className="container mb-28 flex flex-col gap-[1.5rem] md:gap-[3.375rem]">
+      <p className="text-center font-baloo text-[2rem] font-extrabold lg:text-start">
+        Nossos cafés
+      </p>
+      <article className="grid grid-cols-[repeat(auto-fill,256px)] justify-center gap-x-5 gap-y-8">
         <Each
           of={Object.entries(coffesData)}
           render={(coffe) => (
