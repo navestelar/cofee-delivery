@@ -7,7 +7,7 @@ type tagsOption =
   | 'especial'
   | 'alcoólico'
 
-type coffesType =
+export type coffesType =
   | 'ExpressoTradicional'
   | 'ExpressoAmericano'
   | 'ExpressoCremoso'

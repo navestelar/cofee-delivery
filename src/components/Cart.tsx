@@ -1,7 +1,7 @@
 import { Trash } from '@phosphor-icons/react'
 import colors from 'tailwindcss/colors'
 
-import { coffeProperties } from './Catalog'
+import { coffeProperties } from '../interfaces/coffe-interface'
 import Button from './ui/Button'
 import CartCount from './ui/CartCount'
 
