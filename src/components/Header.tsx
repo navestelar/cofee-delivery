@@ -18,7 +18,7 @@ export default function Header() {
           <MapPin size={22} color={colors.purple['500']} />
           <span className="text-sm text-purple-800">Porto Alegre, RS</span>
         </div>
-        <NavLink to="/error" title="Home">
+        <NavLink to="/checkout" title="Checkout">
           <Button
             cartCount={3}
             icon={<ShoppingCart size={22} color={colors.yellow['800']} />}
