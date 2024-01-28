@@ -9,7 +9,7 @@ export default function AddressForm() {
       <p className="font-baloo text-lg font-bold text-gray-700">
         Complete seu pedido
       </p>
-      <div className="flex w-full max-w-[640px] flex-col gap-8 rounded-md bg-gray-100 p-10">
+      <div className="flex w-full flex-col gap-8 rounded-md bg-gray-100 p-10">
         <div className="flex items-start gap-2">
           <MapPinLine size={22} color={colors.yellow['700']} />
           <div className="flex flex-col gap-1">
@@ -22,7 +22,7 @@ export default function AddressForm() {
           </div>
         </div>
 
-        <form className="flex flex-col gap-4">
+        <div className="flex flex-col gap-4">
           <Input
             id="cep"
             onChange={() => console.log('aaaa')}
@@ -82,7 +82,7 @@ export default function AddressForm() {
               inputWidth={60}
             />
           </div>
-        </form>
+        </div>
       </div>
     </div>
   )
