@@ -8,7 +8,7 @@ export default function CoffesSection() {
       <p className="text-center font-baloo text-[2rem] font-extrabold lg:text-start">
         Nossos cafés
       </p>
-      <article className="grid grid-cols-[repeat(auto-fill,256px)] justify-center gap-x-5 gap-y-8">
+      <article className="grid grid-cols-[repeat(auto-fill,256px)] justify-center gap-x-8 gap-y-10">
         <Each
           of={Object.entries(coffesData)}
           render={(coffe) => (

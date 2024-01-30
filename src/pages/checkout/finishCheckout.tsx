@@ -1,3 +1,5 @@
+import { NavLink } from 'react-router-dom'
+
 import Cart from '../../components/Cart'
 import Button from '../../components/ui/Button'
 import { coffesData } from '../../data/coffes-data'
@@ -7,7 +9,7 @@ import { Each } from '../../utils/Each'
 
 export default function FinishCheckout() {
   return (
-    <div className="flex w-full max-w-[448px] flex-col gap-4">
+    <div className="flex w-full max-w-[448px] flex-col gap-3">
       <h3 className="font-baloo text-lg font-bold text-gray-700">
         Cafés selecionados
       </h3>
@@ -42,11 +44,18 @@ export default function FinishCheckout() {
             <span>R$ 33,20</span>
           </div>
         </div>
-        <Button
-          label="confirmar pedido"
-          variant="primary"
-          onClick={() => console.log('finish')}
-        />
+        <NavLink
+          to="/success"
+          title="Success"
+          onClick={() => console.log('success')}
+          // className="pointer-events-none"
+        >
+          <Button
+            label="confirmar pedido"
+            variant="primary"
+            onClick={() => console.log('finish')}
+          />
+        </NavLink>
       </div>
     </div>
   )

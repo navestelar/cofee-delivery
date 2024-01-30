@@ -17,7 +17,7 @@ export default function Button({
 }: buttonProperties) {
   const buttonStyleVariant = {
     primary:
-      'py-3 px-2 bg-yellow-500 hover:bg-yellow-700 text-white text-sm font-bold',
+      'py-3 px-2 bg-yellow-500 hover:bg-yellow-700 text-white text-sm font-bold w-full',
     secondary: 'px-2 bg-gray-300 hover:bg-gray-400 text-xs',
     tertiary: 'p-2 bg-purple-800 hover:bg-purple-500',
     quartenary: 'p-2 bg-yellow-300 hover:opacity-80',
