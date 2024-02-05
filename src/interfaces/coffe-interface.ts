@@ -7,7 +7,7 @@ type tagsOption =
   | 'especial'
   | 'alcoólico'
 
-export type coffesType =
+export type CoffesType =
   | 'ExpressoTradicional'
   | 'ExpressoAmericano'
   | 'ExpressoCremoso'
@@ -35,5 +35,14 @@ export interface coffeProperties {
 }
 
 export type coffeDataInterface = {
-  [coffeType in coffesType]: coffeProperties
+  [coffe in CoffesType]: coffeProperties
+}
+
+export type Coffe = {
+  [coffe in CoffesType]?: number
+}
+
+export type NewCoffe = {
+  type: CoffesType
+  quantity: number
 }

@@ -2,7 +2,7 @@ import { MapPin, ShoppingCart } from '@phosphor-icons/react'
 import { NavLink } from 'react-router-dom'
 import colors from 'tailwindcss/colors'
 
-import Logotipo from '../../public/Logotipo.svg'
+import Logotipo from '../assets/Logotipo.svg'
 import Button from './ui/Button'
 
 export default function Header() {

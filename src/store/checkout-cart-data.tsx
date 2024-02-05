@@ -1,3 +1,3 @@
-import { coffesType } from '../interfaces/coffe-interface'
+import { CoffesType } from '../interfaces/coffe-interface'
 
-export const coffeCheckoutCart: coffesType[] = ['ExpressoTradicional', 'Latte']
+export const coffeCheckoutCart: CoffesType[] = ['ExpressoTradicional', 'Latte']

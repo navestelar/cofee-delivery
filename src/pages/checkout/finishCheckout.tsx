@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom'
 import Cart from '../../components/Cart'
 import Button from '../../components/ui/Button'
 import { coffesData } from '../../data/coffes-data'
-import { coffesType } from '../../interfaces/coffe-interface'
+import { CoffesType } from '../../interfaces/coffe-interface'
 import { coffeCheckoutCart } from '../../store/checkout-cart-data'
 import { Each } from '../../utils/Each'
 
@@ -16,7 +16,7 @@ export default function FinishCheckout() {
       <div className="flex flex-col gap-6 rounded-bl-[44px] rounded-br-[6px] rounded-tl-[6px] rounded-tr-[44px] bg-gray-100 p-10">
         <Each
           of={coffeCheckoutCart}
-          render={(coffeType: coffesType) => (
+          render={(coffeType: CoffesType) => (
             <>
               <Cart
                 img={coffesData[coffeType].img}
