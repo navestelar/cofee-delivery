@@ -29,9 +29,8 @@ export interface coffeProperties {
   img: ReactNode
   tags?: tagsOption[]
   price: string
-  quantity: number
-  setQuantity: (value: number) => void
-  onClick: () => void
+  type: CoffesType
+  addNewCoffe: (coffeType: CoffesType, coffeQuantity: number) => void
 }
 
 export type coffeDataInterface = {

@@ -1,11 +1,15 @@
 import { MapPin, ShoppingCart } from '@phosphor-icons/react'
+import { useContext } from 'react'
 import { NavLink } from 'react-router-dom'
 import colors from 'tailwindcss/colors'
 
 import Logotipo from '../assets/Logotipo.svg'
+import { CoffesContext } from '../contexts/CoffeContext'
 import Button from './ui/Button'
 
 export default function Header() {
+  const { coffes } = useContext(CoffesContext)
+
   return (
     <header className="container flex justify-between py-8">
       <NavLink to="/" title="Home">
@@ -20,7 +24,7 @@ export default function Header() {
         </div>
         <NavLink to="/checkout" title="Checkout">
           <Button
-            cartCount={3}
+            cartCount={Object.keys(coffes).length}
             icon={<ShoppingCart size={22} color={colors.yellow['800']} />}
             variant="quartenary"
           />

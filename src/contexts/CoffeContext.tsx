@@ -4,14 +4,9 @@ import { Coffe, CoffesType, NewCoffe } from '../interfaces/coffe-interface'
 import { addCoffeAction, removeCoffeAction } from '../reducers/actions'
 import { coffesReducer } from '../reducers/reducer'
 
-interface CreateCoffeData {
-  coffeType: CoffesType
-  quantity: number
-}
-
 interface CoffeContextType {
   coffes: Coffe
-  addCoffe: (data: CreateCoffeData) => void
+  addCoffe: (coffeType: CoffesType, coffeQuantity: number) => void
   removeCoffe: (coffeType: CoffesType) => void
 }
 
@@ -48,10 +43,10 @@ export function CoffeContextProvider({ children }: CoffeContextProviderProps) {
     localStorage.setItem('@ignite-timer:coffes-state-1.0.0', stateJSON)
   }, [coffesState])
 
-  function addCoffe(data: CreateCoffeData) {
+  function addCoffe(coffeType: CoffesType, coffeQuantity: number) {
     const newCoffe: NewCoffe = {
-      type: data.coffeType,
-      quantity: data.quantity,
+      type: coffeType,
+      quantity: coffeQuantity,
     }
 
     dispach(addCoffeAction(newCoffe))

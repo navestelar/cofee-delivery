@@ -12,16 +12,22 @@ export function coffesReducer(state: CoffesState, action: any) {
     case ActionTypes.ADD_COFFE:
       return produce(state, (draft) => {
         const { newCoffe } = action.payload
-        draft.coffes = {
-          ...draft.coffes,
-          [newCoffe.type]: newCoffe.quantity,
+
+        if (newCoffe.quantity > 0) {
+          draft.coffes = {
+            ...draft.coffes,
+            [newCoffe.type]: newCoffe.quantity,
+          }
+        } else {
+          const coffeType: CoffesType = newCoffe.type
+          delete draft.coffes[coffeType]
         }
       })
 
     case ActionTypes.REMOVE_COFFE:
       return produce(state, (draft) => {
-        const coffeeType: CoffesType = action.payload
-        delete draft.coffes[coffeeType]
+        const coffeType: CoffesType = action.payload
+        delete draft.coffes[coffeType]
       })
 
     default:

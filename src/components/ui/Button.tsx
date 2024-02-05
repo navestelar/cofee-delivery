@@ -30,10 +30,12 @@ export default function Button({
     >
       {icon}
       {label && <span>{label}</span>}
-      {cartCount && (
+      {cartCount && cartCount > 0 ? (
         <span className="absolute right-[-8px] top-[-8px] flex size-5 place-content-center place-items-center rounded-full bg-yellow-700 text-xs font-bold text-white">
           {cartCount}
         </span>
+      ) : (
+        ''
       )}
     </button>
   )

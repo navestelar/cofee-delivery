@@ -28,9 +28,6 @@ export const coffesData: coffeDataInterface = {
     title: 'Expresso Tradicional',
     subtitle: 'O tradicional café feito com água quente e grãos moídos',
     price: '9,90',
-    onClick: () => console.log('expresso tradicional'),
-    quantity: 1,
-    setQuantity: () => console.log('expresso tradicional qtd'),
   },
   ExpressoAmericano: {
     img: (
@@ -45,9 +42,6 @@ export const coffesData: coffeDataInterface = {
     title: 'Expresso Americano',
     subtitle: 'Expresso diluído, menos intenso que o tradicional',
     price: '9,90',
-    onClick: () => console.log('expresso americano'),
-    quantity: 1,
-    setQuantity: () => console.log('expresso americano qtd'),
   },
   ExpressoCremoso: {
     img: (
@@ -62,9 +56,6 @@ export const coffesData: coffeDataInterface = {
     title: 'Expresso Cremoso',
     subtitle: 'Café expresso tradicional com espuma cremosa',
     price: '9,90',
-    onClick: () => console.log('expresso cremoso'),
-    quantity: 1,
-    setQuantity: () => console.log('expresso cremoso qtd'),
   },
   ExpressoGelado: {
     img: (
@@ -79,9 +70,6 @@ export const coffesData: coffeDataInterface = {
     title: 'Expresso Gelado',
     subtitle: 'Bebida preparada com café expresso e cubos de gelo',
     price: '9,90',
-    onClick: () => console.log('expresso gelado'),
-    quantity: 1,
-    setQuantity: () => console.log('expresso gelado qtd'),
   },
   CafeComLeite: {
     img: (
@@ -91,9 +79,6 @@ export const coffesData: coffeDataInterface = {
     title: 'Café com Leite',
     subtitle: 'Meio a meio de expresso tradicional com leite vaporizado',
     price: '9,90',
-    onClick: () => console.log('café com leite'),
-    quantity: 1,
-    setQuantity: () => console.log('café com leite qtd'),
   },
   Latte: {
     img: <img width={120} height={120} src={latte} alt="café latte" />,
@@ -101,9 +86,6 @@ export const coffesData: coffeDataInterface = {
     title: 'Latte',
     subtitle: 'Uma dose de café expresso com o dobro de leite e espuma cremosa',
     price: '9,90',
-    onClick: () => console.log('latte'),
-    quantity: 1,
-    setQuantity: () => console.log('latte qtd'),
   },
   Capuccino: {
     img: <img width={120} height={120} src={capuccino} alt="café capuccino" />,
@@ -111,9 +93,6 @@ export const coffesData: coffeDataInterface = {
     title: 'Capuccino',
     subtitle: 'Bebida com canela feita de doses iguais de café, leite e espuma',
     price: '9,90',
-    onClick: () => console.log('Capuccino'),
-    quantity: 1,
-    setQuantity: () => console.log('Capuccino qtd'),
   },
   Macchiato: {
     img: <img width={120} height={120} src={macchiato} alt="café Macchiato" />,
@@ -121,9 +100,6 @@ export const coffesData: coffeDataInterface = {
     title: 'Macchiato',
     subtitle: 'Café expresso misturado com um pouco de leite quente e espuma',
     price: '9,90',
-    onClick: () => console.log('Macchiato'),
-    quantity: 1,
-    setQuantity: () => console.log('Macchiato qtd'),
   },
   Mocaccino: {
     img: (
@@ -138,9 +114,6 @@ export const coffesData: coffeDataInterface = {
     title: 'Mocaccino',
     subtitle: 'Café expresso com calda de chocolate, pouco leite e espuma',
     price: '9,90',
-    onClick: () => console.log('mocaccino'),
-    quantity: 1,
-    setQuantity: () => console.log('mocaccino qtd'),
   },
   ChocolateQuente: {
     img: (
@@ -155,9 +128,6 @@ export const coffesData: coffeDataInterface = {
     title: 'Chocolate Quente',
     subtitle: 'Bebida feita com chocolate dissolvido no leite quente e café',
     price: '9,90',
-    onClick: () => console.log('chocolateQuente'),
-    quantity: 1,
-    setQuantity: () => console.log('chocolateQuente qtd'),
   },
   Cubano: {
     img: <img width={120} height={120} src={cubano} alt="cubano tradicional" />,
@@ -165,9 +135,6 @@ export const coffesData: coffeDataInterface = {
     title: 'Cubano',
     subtitle: 'Drink gelado de café expresso com rum, creme de leite e hortelã',
     price: '9,90',
-    onClick: () => console.log('cubano'),
-    quantity: 1,
-    setQuantity: () => console.log('cubano qtd'),
   },
   Havaiano: {
     img: (
@@ -177,9 +144,6 @@ export const coffesData: coffeDataInterface = {
     title: 'Havaiano',
     subtitle: 'Bebida adocicada preparada com café e leite de coco',
     price: '9,90',
-    onClick: () => console.log('havaiano'),
-    quantity: 1,
-    setQuantity: () => console.log('havaiano qtd'),
   },
   Arabe: {
     img: <img width={120} height={120} src={arabe} alt="arabe tradicional" />,
@@ -187,9 +151,6 @@ export const coffesData: coffeDataInterface = {
     title: 'Árabe',
     subtitle: 'Bebida preparada com grãos de café árabe e especiarias',
     price: '9,90',
-    onClick: () => console.log('arabe'),
-    quantity: 1,
-    setQuantity: () => console.log('arabe qtd'),
   },
   Irlandes: {
     img: <img width={120} height={120} src={irlandes} alt="irlandes" />,
@@ -197,8 +158,5 @@ export const coffesData: coffeDataInterface = {
     title: 'Irlandês',
     subtitle: 'Bebida a base de café, uísque irlandês, açúcar e chantilly',
     price: '9,90',
-    onClick: () => console.log('irlandes'),
-    quantity: 1,
-    setQuantity: () => console.log('irlandes qtd'),
   },
 }
