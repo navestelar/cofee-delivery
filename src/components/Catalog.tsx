@@ -14,12 +14,12 @@ export default function Catalog({
   tags,
   price,
   type,
-  addNewCoffe,
+  addCoffe,
 }: coffeProperties) {
   const [quantity, setQuantity] = useState(1)
 
   function handleAddNewCoffe() {
-    addNewCoffe(type, quantity)
+    addCoffe(type, quantity)
   }
 
   return (

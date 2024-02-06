@@ -1,13 +1,16 @@
+import { useContext } from 'react'
 import { NavLink } from 'react-router-dom'
 
 import Cart from '../../components/Cart'
 import Button from '../../components/ui/Button'
+import { CoffesContext } from '../../contexts/CoffeContext'
 import { coffesData } from '../../data/coffes-data'
 import { CoffesType } from '../../interfaces/coffe-interface'
-import { coffeCheckoutCart } from '../../store/checkout-cart-data'
 import { Each } from '../../utils/Each'
 
 export default function FinishCheckout() {
+  const { addCoffe, coffes, removeCoffe } = useContext(CoffesContext)
+
   return (
     <div className="flex w-full max-w-[448px] flex-col gap-3">
       <h3 className="font-baloo text-lg font-bold text-gray-700">
@@ -15,16 +18,17 @@ export default function FinishCheckout() {
       </h3>
       <div className="flex flex-col gap-6 rounded-bl-[44px] rounded-br-[6px] rounded-tl-[6px] rounded-tr-[44px] bg-gray-100 p-10">
         <Each
-          of={coffeCheckoutCart}
-          render={(coffeType: CoffesType) => (
+          of={Object.entries(coffes)}
+          render={(coffe: [CoffesType, number]) => (
             <>
               <Cart
-                img={coffesData[coffeType].img}
-                onClick={coffesData[coffeType].onClick}
-                price={coffesData[coffeType].price}
-                quantity={coffesData[coffeType].quantity}
-                setQuantity={coffesData[coffeType].setQuantity}
-                title={coffesData[coffeType].title}
+                img={coffesData[coffe[0]].img}
+                addCoffe={addCoffe}
+                type={coffe[0]}
+                price={coffesData[coffe[0]].price}
+                quantity={coffe[1]}
+                title={coffesData[coffe[0]].title}
+                removeCoffe={removeCoffe}
               />
               <div className="h-[1px] w-full bg-gray-300"></div>
             </>

@@ -19,7 +19,7 @@ export default function CoffesSection() {
           render={(coffe) => (
             <Catalog
               img={coffe[1].img}
-              addNewCoffe={addCoffe}
+              addCoffe={addCoffe}
               price={coffe[1].price}
               title={coffe[1].title}
               subtitle={coffe[1].subtitle}

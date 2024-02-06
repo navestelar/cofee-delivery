@@ -26,7 +26,7 @@ export function coffesReducer(state: CoffesState, action: any) {
 
     case ActionTypes.REMOVE_COFFE:
       return produce(state, (draft) => {
-        const coffeType: CoffesType = action.payload
+        const coffeType: CoffesType = action.payload.coffeType
         delete draft.coffes[coffeType]
       })
 

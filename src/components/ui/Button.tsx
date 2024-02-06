@@ -27,6 +27,7 @@ export default function Button({
     <button
       className={`relative flex place-content-center place-items-center gap-1 rounded-md uppercase transition ease-in-out ${buttonStyleVariant[variant]}`}
       onClick={onClick}
+      type="button"
     >
       {icon}
       {label && <span>{label}</span>}
