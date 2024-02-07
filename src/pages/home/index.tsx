@@ -1,11 +1,11 @@
-import CoffesSection from './coffes'
+import CoffeesSection from './coffees'
 import Main from './main'
 
 export default function Home() {
   return (
     <>
       <Main />
-      <CoffesSection />
+      <CoffeesSection />
     </>
   )
 }

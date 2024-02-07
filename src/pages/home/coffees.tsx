@@ -1,12 +1,12 @@
 import { useContext } from 'react'
 
 import Catalog from '../../components/Catalog'
-import { CoffesContext } from '../../contexts/CoffeContext'
-import { coffesData } from '../../data/coffes-data'
+import { CoffeesContext } from '../../contexts/CoffeeContext'
+import { coffeesData } from '../../data/coffees-data'
 import { Each } from '../../utils/Each'
 
-export default function CoffesSection() {
-  const { addCoffe } = useContext(CoffesContext)
+export default function CoffeesSection() {
+  const { addCoffee } = useContext(CoffeesContext)
 
   return (
     <section className="container mb-28 flex flex-col gap-[1.5rem] md:gap-[3.375rem]">
@@ -15,16 +15,16 @@ export default function CoffesSection() {
       </p>
       <article className="grid grid-cols-[repeat(auto-fill,256px)] justify-center gap-x-8 gap-y-10">
         <Each
-          of={Object.entries(coffesData)}
-          render={(coffe) => (
+          of={Object.entries(coffeesData)}
+          render={(coffee) => (
             <Catalog
-              img={coffe[1].img}
-              addCoffe={addCoffe}
-              price={coffe[1].price}
-              title={coffe[1].title}
-              subtitle={coffe[1].subtitle}
-              tags={coffe[1].tags}
-              type={coffe[0]}
+              img={coffee[1].img}
+              addCoffee={addCoffee}
+              price={coffee[1].price}
+              title={coffee[1].title}
+              subtitle={coffee[1].subtitle}
+              tags={coffee[1].tags}
+              type={coffee[0]}
             />
           )}
         />

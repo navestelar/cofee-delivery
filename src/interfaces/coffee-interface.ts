@@ -7,7 +7,7 @@ type tagsOption =
   | 'especial'
   | 'alcoólico'
 
-export type CoffesType =
+export type CoffeesType =
   | 'ExpressoTradicional'
   | 'ExpressoAmericano'
   | 'ExpressoCremoso'
@@ -23,28 +23,31 @@ export type CoffesType =
   | 'Arabe'
   | 'Irlandes'
 
-export interface coffeProperties {
+export interface commomCoffeeProperties {
   title: string
   subtitle?: string
   img: ReactNode
-  tags?: tagsOption[]
-  quantity?: number
   price: string
-  type: CoffesType
+  tags?: tagsOption[]
+}
+
+export interface coffeeProperties extends commomCoffeeProperties {
+  quantity?: number
+  type: CoffeesType
   setQuantity?: (quantity: number) => void
-  removeCoffe?: (coffeType: CoffesType) => void
-  addCoffe: (coffeType: CoffesType, coffeQuantity: number) => void
+  removeCoffee?: (coffeeType: CoffeesType) => void
+  addCoffee: (coffeeType: CoffeesType, coffeeQuantity: number) => void
 }
 
-export type coffeDataInterface = {
-  [coffe in CoffesType]: coffeProperties
+export type coffeeDataInterface = {
+  [coffee in CoffeesType]: commomCoffeeProperties
 }
 
-export type Coffe = {
-  [coffe in CoffesType]?: number
+export type Coffee = {
+  [coffee in CoffeesType]?: number
 }
 
-export type NewCoffe = {
-  type: CoffesType
+export type NewCoffee = {
+  type: CoffeesType
   quantity: number
 }

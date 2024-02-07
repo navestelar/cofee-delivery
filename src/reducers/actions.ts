@@ -1,24 +1,24 @@
-import { CoffesType, NewCoffe } from '../interfaces/coffe-interface'
+import { CoffeesType, NewCoffee } from '../interfaces/coffee-interface'
 
 export enum ActionTypes {
   ADD_COFFE = 'ADD_COFFE',
   REMOVE_COFFE = 'REMOVE_COFFE',
 }
 
-export function addCoffeAction(newCoffe: NewCoffe) {
+export function addCoffeeAction(newCoffee: NewCoffee) {
   return {
     type: ActionTypes.ADD_COFFE,
     payload: {
-      newCoffe,
+      newCoffee,
     },
   }
 }
 
-export function removeCoffeAction(coffeType: CoffesType) {
+export function removeCoffeeAction(coffeeType: CoffeesType) {
   return {
     type: ActionTypes.REMOVE_COFFE,
     payload: {
-      coffeType,
+      coffeeType,
     },
   }
 }

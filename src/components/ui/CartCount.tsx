@@ -7,7 +7,7 @@ interface cartCountProperties {
 
 export default function CartCount({ count, setCount }: cartCountProperties) {
   function handleDecrease() {
-    count > 0 && setCount(count - 1)
+    count > 1 && setCount(count - 1)
   }
 
   function handleIncrease() {

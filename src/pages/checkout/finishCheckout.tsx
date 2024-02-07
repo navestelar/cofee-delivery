@@ -3,13 +3,23 @@ import { NavLink } from 'react-router-dom'
 
 import Cart from '../../components/Cart'
 import Button from '../../components/ui/Button'
-import { CoffesContext } from '../../contexts/CoffeContext'
-import { coffesData } from '../../data/coffes-data'
-import { CoffesType } from '../../interfaces/coffe-interface'
+import { CoffeesContext } from '../../contexts/CoffeeContext'
+import { coffeesData } from '../../data/coffees-data'
+import { CoffeesType } from '../../interfaces/coffee-interface'
 import { Each } from '../../utils/Each'
 
 export default function FinishCheckout() {
-  const { addCoffe, coffes, removeCoffe } = useContext(CoffesContext)
+  const { addCoffee, coffees, removeCoffee } = useContext(CoffeesContext)
+
+  function getTotalCoffeee() {
+    let totalQuantity = 0
+    Object.values(coffees).forEach((quantity) => {
+      totalQuantity += quantity
+    })
+    const valueTotal = totalQuantity * 9.9
+    const valueTotalFormatted = valueTotal.toFixed(2).replace('.', ',')
+    return valueTotalFormatted
+  }
 
   return (
     <div className="flex w-full max-w-[448px] flex-col gap-3">
@@ -18,17 +28,17 @@ export default function FinishCheckout() {
       </h3>
       <div className="flex flex-col gap-6 rounded-bl-[44px] rounded-br-[6px] rounded-tl-[6px] rounded-tr-[44px] bg-gray-100 p-10">
         <Each
-          of={Object.entries(coffes)}
-          render={(coffe: [CoffesType, number]) => (
+          of={Object.entries(coffees)}
+          render={(coffee: [CoffeesType, number]) => (
             <>
               <Cart
-                img={coffesData[coffe[0]].img}
-                addCoffe={addCoffe}
-                type={coffe[0]}
-                price={coffesData[coffe[0]].price}
-                quantity={coffe[1]}
-                title={coffesData[coffe[0]].title}
-                removeCoffe={removeCoffe}
+                img={coffeesData[coffee[0]].img}
+                addCoffee={addCoffee}
+                type={coffee[0]}
+                price={coffeesData[coffee[0]].price}
+                quantity={coffee[1]}
+                title={coffeesData[coffee[0]].title}
+                removeCoffee={removeCoffee}
               />
               <div className="h-[1px] w-full bg-gray-300"></div>
             </>
@@ -37,7 +47,7 @@ export default function FinishCheckout() {
         <div className="flex flex-col gap-[6px]">
           <div className="flex items-center justify-between text-gray-600">
             <span className="text-sm">Total de itens</span>
-            <span className="text-base">R$ 29,70</span>
+            <span className="text-base">R$ {getTotalCoffeee()}</span>
           </div>
           <div className="flex items-center justify-between text-gray-600">
             <span className="text-sm">Entrega</span>

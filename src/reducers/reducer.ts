@@ -1,33 +1,33 @@
 import { produce } from 'immer'
 
-import { Coffe, CoffesType } from '../interfaces/coffe-interface'
+import { Coffee, CoffeesType } from '../interfaces/coffee-interface'
 import { ActionTypes } from './actions'
 
-interface CoffesState {
-  coffes: Coffe
+interface CoffeesState {
+  coffees: Coffee
 }
 
-export function coffesReducer(state: CoffesState, action: any) {
+export function coffeesReducer(state: CoffeesState, action: any) {
   switch (action.type) {
     case ActionTypes.ADD_COFFE:
       return produce(state, (draft) => {
-        const { newCoffe } = action.payload
+        const { newCoffee } = action.payload
 
-        if (newCoffe.quantity > 0) {
-          draft.coffes = {
-            ...draft.coffes,
-            [newCoffe.type]: newCoffe.quantity,
+        if (newCoffee.quantity > 0) {
+          draft.coffees = {
+            ...draft.coffees,
+            [newCoffee.type]: newCoffee.quantity,
           }
         } else {
-          const coffeType: CoffesType = newCoffe.type
-          delete draft.coffes[coffeType]
+          const coffeeType: CoffeesType = newCoffee.type
+          delete draft.coffees[coffeeType]
         }
       })
 
     case ActionTypes.REMOVE_COFFE:
       return produce(state, (draft) => {
-        const coffeType: CoffesType = action.payload.coffeType
-        delete draft.coffes[coffeType]
+        const coffeeType: CoffeesType = action.payload.coffeeType
+        delete draft.coffees[coffeeType]
       })
 
     default:

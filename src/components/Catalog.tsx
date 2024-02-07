@@ -2,7 +2,7 @@ import { ShoppingCartSimple } from '@phosphor-icons/react'
 import { useState } from 'react'
 import colors from 'tailwindcss/colors'
 
-import { coffeProperties } from '../interfaces/coffe-interface'
+import { coffeeProperties } from '../interfaces/coffee-interface'
 import { Each } from '../utils/Each'
 import Button from './ui/Button'
 import CartCount from './ui/CartCount'
@@ -14,12 +14,12 @@ export default function Catalog({
   tags,
   price,
   type,
-  addCoffe,
-}: coffeProperties) {
+  addCoffee,
+}: coffeeProperties) {
   const [quantity, setQuantity] = useState(1)
 
-  function handleAddNewCoffe() {
-    addCoffe(type, quantity)
+  function handleAddNewCoffee() {
+    addCoffee(type, quantity)
   }
 
   return (
@@ -55,7 +55,7 @@ export default function Catalog({
           <CartCount count={quantity} setCount={setQuantity} />
           <Button
             variant="tertiary"
-            onClick={handleAddNewCoffe}
+            onClick={handleAddNewCoffee}
             icon={<ShoppingCartSimple size={22} color={colors.white} />}
           />
         </div>

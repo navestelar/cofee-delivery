@@ -2,7 +2,7 @@ import { ShoppingCart, Timer } from '@phosphor-icons/react'
 import colors from 'tailwindcss/colors'
 
 import Background from '../../assets/Background.png'
-import CoffeImage from '../../assets/homeImage.png'
+import CoffeeImage from '../../assets/homeImage.png'
 
 export default function Main() {
   return (
@@ -17,7 +17,7 @@ export default function Main() {
               Encontre o café perfeito para qualquer hora do dia
             </span>
             <p className="text-xl text-gray-700">
-              Com o Coffee Delivery você recebe seu café onde estiver, a
+              Com o Coffeee Delivery você recebe seu café onde estiver, a
               qualquer hora
             </p>
           </div>
@@ -64,7 +64,7 @@ export default function Main() {
         </div>
 
         <div className="max-w-[320px] lg:max-w-[476px]">
-          <img src={CoffeImage} alt="Coffe" />
+          <img src={CoffeeImage} alt="Coffee" />
         </div>
       </div>
     </main>

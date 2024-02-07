@@ -1,26 +1,12 @@
-import chocolateQuente from '../assets/coffes/chocolateQuente.png'
-import expressoAmericano from '../assets/coffes/coffeAmericano.png'
-import arabe from '../assets/coffes/coffeArabe.png'
-import capuccino from '../assets/coffes/coffeCapuccino.png'
-import cafeComLeite from '../assets/coffes/coffeComLeite.png'
-import cubano from '../assets/coffes/coffeCubano.png'
-import expressoTradicional from '../assets/coffes/coffeExpresso.png'
-import expressoCremoso from '../assets/coffes/coffeExpressoCremoso.png'
-import expressoGelado from '../assets/coffes/coffeGelado.png'
-import havaiano from '../assets/coffes/coffeHavaiano.png'
-import irlandes from '../assets/coffes/coffeIrlandes.png'
-import latte from '../assets/coffes/coffeLatte.png'
-import macchiato from '../assets/coffes/coffeMacchiato.png'
-import mocaccino from '../assets/coffes/coffeMochaccino.png'
-import { coffeDataInterface } from '../interfaces/coffe-interface'
+import { coffeeDataInterface } from '../interfaces/coffee-interface'
 
-export const coffesData: coffeDataInterface = {
+export const coffeesData: coffeeDataInterface = {
   ExpressoTradicional: {
     img: (
       <img
         width={120}
         height={120}
-        src={expressoTradicional}
+        src="/expressoTradicional"
         alt="café expresso tradicional"
       />
     ),
@@ -34,7 +20,7 @@ export const coffesData: coffeDataInterface = {
       <img
         width={120}
         height={120}
-        src={expressoAmericano}
+        src="expressoAmericano"
         alt="café expresso americano"
       />
     ),
@@ -48,7 +34,7 @@ export const coffesData: coffeDataInterface = {
       <img
         width={120}
         height={120}
-        src={expressoCremoso}
+        src="expressoCremoso"
         alt="café expresso cremoso"
       />
     ),
@@ -62,7 +48,7 @@ export const coffesData: coffeDataInterface = {
       <img
         width={120}
         height={120}
-        src={expressoGelado}
+        src="expressoGelado"
         alt="café expresso gelado"
       />
     ),
@@ -73,7 +59,7 @@ export const coffesData: coffeDataInterface = {
   },
   CafeComLeite: {
     img: (
-      <img width={120} height={120} src={cafeComLeite} alt="café com leite" />
+      <img width={120} height={120} src="cafeComLeite" alt="café com leite" />
     ),
     tags: ['tradicional', 'com leite'],
     title: 'Café com Leite',
@@ -81,21 +67,21 @@ export const coffesData: coffeDataInterface = {
     price: '9,90',
   },
   Latte: {
-    img: <img width={120} height={120} src={latte} alt="café latte" />,
+    img: <img width={120} height={120} src="latte" alt="café latte" />,
     tags: ['tradicional', 'com leite'],
     title: 'Latte',
     subtitle: 'Uma dose de café expresso com o dobro de leite e espuma cremosa',
     price: '9,90',
   },
   Capuccino: {
-    img: <img width={120} height={120} src={capuccino} alt="café capuccino" />,
+    img: <img width={120} height={120} src="capuccino" alt="café capuccino" />,
     tags: ['tradicional', 'com leite'],
     title: 'Capuccino',
     subtitle: 'Bebida com canela feita de doses iguais de café, leite e espuma',
     price: '9,90',
   },
   Macchiato: {
-    img: <img width={120} height={120} src={macchiato} alt="café Macchiato" />,
+    img: <img width={120} height={120} src="macchiato" alt="café Macchiato" />,
     tags: ['tradicional', 'com leite'],
     title: 'Macchiato',
     subtitle: 'Café expresso misturado com um pouco de leite quente e espuma',
@@ -106,7 +92,7 @@ export const coffesData: coffeDataInterface = {
       <img
         width={120}
         height={120}
-        src={mocaccino}
+        src="mocaccino"
         alt="mocaccino tradicional"
       />
     ),
@@ -120,7 +106,7 @@ export const coffesData: coffeDataInterface = {
       <img
         width={120}
         height={120}
-        src={chocolateQuente}
+        src="chocolateQuente"
         alt="chocolateQuente tradicional"
       />
     ),
@@ -130,7 +116,7 @@ export const coffesData: coffeDataInterface = {
     price: '9,90',
   },
   Cubano: {
-    img: <img width={120} height={120} src={cubano} alt="cubano tradicional" />,
+    img: <img width={120} height={120} src="cubano" alt="cubano tradicional" />,
     tags: ['especial', 'alcoólico', 'gelado'],
     title: 'Cubano',
     subtitle: 'Drink gelado de café expresso com rum, creme de leite e hortelã',
@@ -138,7 +124,7 @@ export const coffesData: coffeDataInterface = {
   },
   Havaiano: {
     img: (
-      <img width={120} height={120} src={havaiano} alt="havaiano tradicional" />
+      <img width={120} height={120} src="havaiano" alt="havaiano tradicional" />
     ),
     tags: ['especial'],
     title: 'Havaiano',
@@ -146,14 +132,14 @@ export const coffesData: coffeDataInterface = {
     price: '9,90',
   },
   Arabe: {
-    img: <img width={120} height={120} src={arabe} alt="arabe tradicional" />,
+    img: <img width={120} height={120} src="arabe" alt="arabe tradicional" />,
     tags: ['especial'],
     title: 'Árabe',
     subtitle: 'Bebida preparada com grãos de café árabe e especiarias',
     price: '9,90',
   },
   Irlandes: {
-    img: <img width={120} height={120} src={irlandes} alt="irlandes" />,
+    img: <img width={120} height={120} src="irlandes" alt="irlandes" />,
     tags: ['especial', 'alcoólico'],
     title: 'Irlandês',
     subtitle: 'Bebida a base de café, uísque irlandês, açúcar e chantilly',

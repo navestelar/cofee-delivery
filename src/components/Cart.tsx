@@ -2,7 +2,7 @@ import { Trash } from '@phosphor-icons/react'
 import { useState } from 'react'
 import colors from 'tailwindcss/colors'
 
-import { coffeProperties } from '../interfaces/coffe-interface'
+import { coffeeProperties } from '../interfaces/coffee-interface'
 import Button from './ui/Button'
 import CartCount from './ui/CartCount'
 
@@ -10,20 +10,20 @@ export default function Cart({
   img,
   title,
   type,
-  addCoffe,
-  removeCoffe,
+  addCoffee,
+  removeCoffee,
   quantity,
   price,
-}: coffeProperties) {
+}: coffeeProperties) {
   const [newQuantity, setNewQuantity] = useState(quantity ?? 0)
 
-  function handleRemoveCoffe() {
-    removeCoffe && removeCoffe(type)
+  function handleRemoveCoffee() {
+    removeCoffee && removeCoffee(type)
   }
 
   function handleSetCount(value: number) {
     setNewQuantity(value)
-    addCoffe(type, value)
+    addCoffee(type, value)
   }
 
   return (
@@ -38,7 +38,7 @@ export default function Cart({
               variant="secondary"
               icon={<Trash size={16} color={colors.purple['500']} />}
               label="remover"
-              onClick={handleRemoveCoffe}
+              onClick={handleRemoveCoffee}
             />
           </div>
         </div>
