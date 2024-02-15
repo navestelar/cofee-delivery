@@ -6,7 +6,7 @@ export const coffeesData: coffeeDataInterface = {
       <img
         width={120}
         height={120}
-        src="/expressoTradicional"
+        src="/expressoTradicional.png"
         alt="café expresso tradicional"
       />
     ),
@@ -20,7 +20,7 @@ export const coffeesData: coffeeDataInterface = {
       <img
         width={120}
         height={120}
-        src="expressoAmericano"
+        src="/expressoAmericano.png"
         alt="café expresso americano"
       />
     ),
@@ -34,7 +34,7 @@ export const coffeesData: coffeeDataInterface = {
       <img
         width={120}
         height={120}
-        src="expressoCremoso"
+        src="/expressoCremoso.png"
         alt="café expresso cremoso"
       />
     ),
@@ -48,7 +48,7 @@ export const coffeesData: coffeeDataInterface = {
       <img
         width={120}
         height={120}
-        src="expressoGelado"
+        src="/expressoGelado.png"
         alt="café expresso gelado"
       />
     ),
@@ -59,7 +59,12 @@ export const coffeesData: coffeeDataInterface = {
   },
   CafeComLeite: {
     img: (
-      <img width={120} height={120} src="cafeComLeite" alt="café com leite" />
+      <img
+        width={120}
+        height={120}
+        src="/cafeComLeite.png"
+        alt="café com leite"
+      />
     ),
     tags: ['tradicional', 'com leite'],
     title: 'Café com Leite',
@@ -67,14 +72,16 @@ export const coffeesData: coffeeDataInterface = {
     price: '9,90',
   },
   Latte: {
-    img: <img width={120} height={120} src="latte" alt="café latte" />,
+    img: <img width={120} height={120} src="/latte.png" alt="café latte" />,
     tags: ['tradicional', 'com leite'],
     title: 'Latte',
     subtitle: 'Uma dose de café expresso com o dobro de leite e espuma cremosa',
     price: '9,90',
   },
   Capuccino: {
-    img: <img width={120} height={120} src="capuccino" alt="café capuccino" />,
+    img: (
+      <img width={120} height={120} src="/capuccino.png" alt="café capuccino" />
+    ),
     tags: ['tradicional', 'com leite'],
     title: 'Capuccino',
     subtitle: 'Bebida com canela feita de doses iguais de café, leite e espuma',
@@ -92,7 +99,7 @@ export const coffeesData: coffeeDataInterface = {
       <img
         width={120}
         height={120}
-        src="mocaccino"
+        src="/mocaccino.png"
         alt="mocaccino tradicional"
       />
     ),
@@ -106,7 +113,7 @@ export const coffeesData: coffeeDataInterface = {
       <img
         width={120}
         height={120}
-        src="chocolateQuente"
+        src="/chocolateQuente.png"
         alt="chocolateQuente tradicional"
       />
     ),
@@ -116,7 +123,14 @@ export const coffeesData: coffeeDataInterface = {
     price: '9,90',
   },
   Cubano: {
-    img: <img width={120} height={120} src="cubano" alt="cubano tradicional" />,
+    img: (
+      <img
+        width={120}
+        height={120}
+        src="/cubano.png"
+        alt="cubano tradicional"
+      />
+    ),
     tags: ['especial', 'alcoólico', 'gelado'],
     title: 'Cubano',
     subtitle: 'Drink gelado de café expresso com rum, creme de leite e hortelã',
@@ -124,7 +138,12 @@ export const coffeesData: coffeeDataInterface = {
   },
   Havaiano: {
     img: (
-      <img width={120} height={120} src="havaiano" alt="havaiano tradicional" />
+      <img
+        width={120}
+        height={120}
+        src="/havaiano.png"
+        alt="havaiano tradicional"
+      />
     ),
     tags: ['especial'],
     title: 'Havaiano',
@@ -132,14 +151,16 @@ export const coffeesData: coffeeDataInterface = {
     price: '9,90',
   },
   Arabe: {
-    img: <img width={120} height={120} src="arabe" alt="arabe tradicional" />,
+    img: (
+      <img width={120} height={120} src="/arabe.png" alt="arabe tradicional" />
+    ),
     tags: ['especial'],
     title: 'Árabe',
     subtitle: 'Bebida preparada com grãos de café árabe e especiarias',
     price: '9,90',
   },
   Irlandes: {
-    img: <img width={120} height={120} src="irlandes" alt="irlandes" />,
+    img: <img width={120} height={120} src="/irlandes.png" alt="irlandes" />,
     tags: ['especial', 'alcoólico'],
     title: 'Irlandês',
     subtitle: 'Bebida a base de café, uísque irlandês, açúcar e chantilly',
