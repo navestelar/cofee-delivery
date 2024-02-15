@@ -99,7 +99,7 @@ export const coffeesData: coffeeDataInterface = {
       <img
         width={120}
         height={120}
-        src="/coffeesmacchiato"
+        src="/coffees/coffeesmacchiato"
         alt="café Macchiato"
       />
     ),
