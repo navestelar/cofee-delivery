@@ -17,7 +17,7 @@ export default function Main() {
               Encontre o café perfeito para qualquer hora do dia
             </span>
             <p className="text-xl text-gray-700">
-              Com o Coffeee Delivery você recebe seu café onde estiver, a
+              Com o Coffee Delivery você recebe seu café onde estiver, a
               qualquer hora
             </p>
           </div>
