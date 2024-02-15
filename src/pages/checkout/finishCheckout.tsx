@@ -65,7 +65,7 @@ export default function FinishCheckout() {
           </div>
         </div>
         <NavLink
-          to="/success"
+          to="/coffee-delivery/success"
           title="Success"
           onClick={() => console.log('success')}
           // className="pointer-events-none"

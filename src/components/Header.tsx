@@ -12,7 +12,7 @@ export default function Header() {
 
   return (
     <header className="container flex justify-between py-8">
-      <NavLink to="/" title="Home">
+      <NavLink to="/coffee-delivery/" title="Home">
         <h1 title="Coffee Delivery">
           <img src={Logotipo} alt="Logotivo coffee delivery" />
         </h1>
@@ -22,7 +22,7 @@ export default function Header() {
           <MapPin size={22} color={colors.purple['500']} />
           <span className="text-sm text-purple-800">Porto Alegre, RS</span>
         </div>
-        <NavLink to="/checkout" title="Checkout">
+        <NavLink to="/coffee-delivery/checkout" title="Checkout">
           <Button
             cartCount={Object.keys(coffees).length}
             icon={<ShoppingCart size={22} color={colors.yellow['800']} />}
