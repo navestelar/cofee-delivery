@@ -1,18 +1,18 @@
 {
-  "homepage": "https://navestelar.github.io/coffee-delivery",
   "name": "coffee-delivery",
   "private": true,
   "version": "0.0.0",
+  "homepage": "https://navestelar.github.io/coffee-delivery/",
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "tsc && vite build",
+    "build": "vite build",
     "lint": "eslint .",
     "lint:debug": "eslint ./src --debug",
     "lint:fix": "eslint ./src --fix",
     "preview": "vite preview",
-    "predeploy": "vite build",
-    "deploy": "gh-pages -d dist"
+    "predeploy" : "npm run build",
+    "deploy" : "gh-pages -d dist"
   },
   "dependencies": {
     "@phosphor-icons/react": "^2.0.15",
