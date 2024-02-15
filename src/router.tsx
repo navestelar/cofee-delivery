@@ -9,10 +9,12 @@ export function AppRoutes() {
 
   return (
     <Routes>
-      <Route path="/coffee-delivery/*" element={<Main />} />
+      <Route path="*" element={<Main />} />
       <Route path="/coffee-delivery/checkout" element={<Checkout />} />
 
-      {isAuthenticated && <Route path="success" element={<Success />} />}
+      {isAuthenticated && (
+        <Route path="/coffee-delivery/success" element={<Success />} />
+      )}
     </Routes>
   )
 }
