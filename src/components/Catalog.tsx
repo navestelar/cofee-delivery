@@ -1,5 +1,6 @@
 import { ShoppingCartSimple } from '@phosphor-icons/react'
 import { useState } from 'react'
+import toast from 'react-hot-toast'
 import colors from 'tailwindcss/colors'
 
 import { coffeeProperties } from '../interfaces/coffee-interface'
@@ -20,6 +21,9 @@ export default function Catalog({
 
   function handleAddNewCoffee() {
     addCoffee(type, quantity)
+    toast.success(
+      `${quantity} ${title} ${quantity > 1 ? 'adicionados' : 'adicionado'} ao carrinho`,
+    )
   }
 
   return (
